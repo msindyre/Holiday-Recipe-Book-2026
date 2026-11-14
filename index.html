@@ -4,596 +4,527 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="robots" content="noindex, nofollow">
-<title>Client Community Holiday Recipe Book 2026</title>
-<meta name="description" content="Favorite holiday recipes shared by our client community, Holiday Kickoff 2026.">
+<meta name="theme-color" content="#0a0a0a">
+<title>Client Community Holiday Recipe Book</title>
+<meta name="description" content="Favorite holiday recipes shared by our client community.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
 <style>
   :root{
-    --black:#0a0a0a;
-    --ink:#1d1b18;
-    --gold:#B19A55;
-    --gold-soft:#cdb87e;
-    --ivory:#F7F5F1;
-    --paper:#fffdf9;
-    --cranberry:#8E1B2C;
-    --cranberry-soft:#f3e3e4;
-    --evergreen:#2F4A3A;
-    --evergreen-soft:#e4ece6;
-    --muted:#6d675e;
-    --line:#e6dfd2;
+    --black:#0a0a0a; --ink:#1d1b18; --gold:#B19A55; --gold-soft:#cdb87e;
+    --ivory:#F7F5F1; --paper:#fffcf6; --paper-edge:#efe7d8;
+    --cranberry:#8E1B2C; --evergreen:#2F4A3A; --muted:#6d675e; --line:#e6dfd2;
+    --page-h:min(84vh, 820px);
   }
   *{box-sizing:border-box;margin:0;padding:0;}
-  html{scroll-behavior:smooth;}
+  html,body{height:100%;}
   body{
-    background:var(--ivory);
-    color:var(--ink);
-    font-family:'Jost',sans-serif;
-    font-weight:400;
-    line-height:1.6;
-    -webkit-font-smoothing:antialiased;
+    background:radial-gradient(ellipse at top,#2a2622 0%,#121110 60%,#0a0a0a 100%);
+    color:var(--ink); font-family:'Jost',sans-serif; line-height:1.6;
+    -webkit-font-smoothing:antialiased; overflow-x:hidden;
   }
   img{max-width:100%;display:block;}
-  a{color:inherit;}
+  button{font-family:inherit;}
 
-  /* ---------- Cover ---------- */
-  .cover{
-    position:relative;
-    background:var(--black);
-    color:var(--ivory);
-    text-align:center;
-    padding:72px 20px 88px;
-    overflow:hidden;
+  /* ---------- Top bar ---------- */
+  .bar{
+    display:flex;align-items:center;justify-content:space-between;gap:12px;
+    padding:12px 16px;color:var(--ivory);max-width:1180px;margin:0 auto;
   }
-  .cover::before,.cover::after{
-    content:"";
-    position:absolute;
-    width:340px;height:340px;
-    border-radius:50%;
-    border:1px solid rgba(177,154,85,0.25);
+  .bar .title{font-family:'Cinzel',serif;font-size:12px;letter-spacing:.24em;text-transform:uppercase;color:var(--gold-soft);text-align:center;flex:1;}
+  .chip{
+    background:transparent;border:1px solid rgba(205,184,126,.45);color:var(--ivory);
+    font-size:11px;letter-spacing:.16em;text-transform:uppercase;padding:8px 12px;cursor:pointer;white-space:nowrap;
   }
-  .cover::before{top:-170px;left:-120px;}
-  .cover::after{bottom:-190px;right:-110px;}
-  .sprig{width:120px;margin:0 auto 22px;}
-  .eyebrow{
-    font-family:'Cinzel',serif;
-    font-size:12px;
-    letter-spacing:0.32em;
-    color:var(--gold);
-    text-transform:uppercase;
-  }
-  .cover h1{
-    font-family:'Cormorant Garamond',serif;
-    font-weight:500;
-    font-size:clamp(40px,9vw,72px);
-    line-height:1.05;
-    margin:14px auto 10px;
-    max-width:760px;
-  }
-  .cover h1 em{color:var(--gold-soft);font-style:italic;}
-  .cover .sub{
-    font-family:'Cormorant Garamond',serif;
-    font-style:italic;
-    font-size:20px;
-    color:rgba(247,245,241,0.75);
-  }
-  .rule{
-    width:64px;height:1px;background:var(--gold);
-    margin:26px auto;
-  }
-  .cover .meta{
-    font-size:13px;
-    letter-spacing:0.12em;
-    text-transform:uppercase;
-    color:rgba(247,245,241,0.6);
-  }
+  .chip:hover{background:rgba(205,184,126,.15);}
 
-  /* ---------- Layout ---------- */
-  .wrap{max-width:860px;margin:0 auto;padding:0 18px;}
-
-  .letter{
+  /* ---------- Book stage ---------- */
+  .stage{display:flex;justify-content:center;align-items:flex-start;padding:4px 16px 0;perspective:2200px;}
+  .book{position:relative;display:flex;width:100%;max-width:520px;}
+  .book.spread{max-width:1100px;}
+  .book.spread.solo{max-width:550px;}
+  .book.spread:not(.solo)::after{
+    content:"";position:absolute;top:0;bottom:0;left:50%;width:40px;transform:translateX(-50%);
+    background:linear-gradient(90deg,rgba(0,0,0,0) 0%,rgba(0,0,0,.16) 45%,rgba(0,0,0,.22) 50%,rgba(0,0,0,.16) 55%,rgba(0,0,0,0) 100%);
+    pointer-events:none;z-index:3;
+  }
+  .page{
+    display:none;position:relative;flex:1 1 0;min-width:0;
     background:var(--paper);
-    border:1px solid var(--line);
-    margin:-44px auto 0;
-    position:relative;
-    padding:36px 28px 32px;
-    box-shadow:0 18px 40px -28px rgba(10,10,10,0.35);
+    background-image:radial-gradient(rgba(177,154,85,.05) 1px,transparent 1px);
+    background-size:6px 6px;
+    box-shadow:0 30px 60px -30px rgba(0,0,0,.8), inset 0 0 0 1px var(--paper-edge);
+    padding:34px 30px 54px;
+    min-height:calc(100vh - 150px);
   }
-  .letter h2{
-    font-family:'Cinzel',serif;
-    font-weight:500;
-    font-size:15px;
-    letter-spacing:0.2em;
-    color:var(--cranberry);
-    text-transform:uppercase;
-    margin-bottom:14px;
+  .page.show{display:block;}
+  .book.spread .page{height:var(--page-h);min-height:0;overflow-y:auto;scrollbar-width:thin;}
+  .book.spread .page.left{box-shadow:-18px 30px 60px -30px rgba(0,0,0,.8), inset -10px 0 18px -14px rgba(0,0,0,.25), inset 0 0 0 1px var(--paper-edge);}
+  .book.spread .page.right{box-shadow:18px 30px 60px -30px rgba(0,0,0,.8), inset 10px 0 18px -14px rgba(0,0,0,.25), inset 0 0 0 1px var(--paper-edge);}
+
+  .page.turn-next{animation:turnNext .55s cubic-bezier(.2,.7,.3,1) both;transform-origin:left center;}
+  .page.turn-prev{animation:turnPrev .55s cubic-bezier(.2,.7,.3,1) both;transform-origin:right center;}
+  @keyframes turnNext{from{transform:rotateY(-28deg);opacity:0;}to{transform:none;opacity:1;}}
+  @keyframes turnPrev{from{transform:rotateY(28deg);opacity:0;}to{transform:none;opacity:1;}}
+  @media (prefers-reduced-motion:reduce){.page.turn-next,.page.turn-prev{animation:none;}}
+
+  .folio{
+    position:absolute;bottom:18px;left:0;right:0;text-align:center;
+    font-family:'Cormorant Garamond',serif;font-style:italic;font-size:15px;color:var(--muted);
   }
-  .letter p{
-    font-family:'Cormorant Garamond',serif;
-    font-size:20px;
-    line-height:1.55;
-    margin-bottom:12px;
+  .running{
+    font-family:'Cinzel',serif;font-size:10px;letter-spacing:.26em;text-transform:uppercase;
+    color:var(--gold);text-align:center;margin-bottom:22px;
   }
-  .letter .sig{
-    font-family:'Cormorant Garamond',serif;
-    font-style:italic;
-    font-size:22px;
-    color:var(--evergreen);
-    margin-top:6px;
+
+  /* ---------- Cover / back cover ---------- */
+  .page.cover{
+    background:var(--black);color:var(--ivory);text-align:center;
+    display:none;padding:56px 34px;
+    background-image:radial-gradient(circle at 50% 0%,rgba(177,154,85,.18),transparent 60%);
+    box-shadow:0 30px 60px -30px rgba(0,0,0,.9), inset 0 0 0 1px #222;
   }
+  .page.cover.show{display:flex;flex-direction:column;justify-content:center;align-items:center;}
+  .cover .frame{position:absolute;inset:16px;border:1px solid rgba(177,154,85,.45);pointer-events:none;}
+  .cover .frame::after{content:"";position:absolute;inset:6px;border:1px solid rgba(177,154,85,.18);}
+  .cover .logo{width:118px;margin:0 auto 26px;}
+  .cover .sprig{width:120px;margin:0 auto 18px;}
+  .eyebrow{font-family:'Cinzel',serif;font-size:11px;letter-spacing:.32em;color:var(--gold);text-transform:uppercase;}
+  .cover h1{font-family:'Cormorant Garamond',serif;font-weight:500;font-size:clamp(40px,7vw,60px);line-height:1.04;margin:14px 0 10px;}
+  .cover h1 em{color:var(--gold-soft);}
+  .cover .sub{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:19px;color:rgba(247,245,241,.75);max-width:360px;}
+  .cover .vol{
+    margin-top:28px;font-family:'Cinzel',serif;font-size:12px;letter-spacing:.3em;text-transform:uppercase;
+    border-top:1px solid var(--gold);border-bottom:1px solid var(--gold);padding:8px 16px;color:var(--gold-soft);
+  }
+  .cover .open-hint{margin-top:30px;font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:rgba(247,245,241,.5);}
+  .cover .hosts{margin-top:18px;font-size:12px;letter-spacing:.08em;color:rgba(247,245,241,.6);}
+
+  /* ---------- Letter ---------- */
+  .letter h2,.contents h2,.page h2.sec{
+    font-family:'Cormorant Garamond',serif;font-weight:500;font-size:34px;line-height:1.1;text-align:center;margin-bottom:6px;
+  }
+  .orn{width:70px;height:1px;background:var(--gold);margin:14px auto 24px;}
+  .letter p{font-family:'Cormorant Garamond',serif;font-size:20px;line-height:1.6;margin-bottom:14px;}
+  .letter p:first-of-type::first-letter{
+    float:left;font-family:'Cinzel',serif;font-size:58px;line-height:.9;padding:6px 8px 0 0;color:var(--cranberry);
+  }
+  .letter .sig{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:24px;color:var(--evergreen);margin-top:18px;text-align:right;}
 
   /* ---------- Contents ---------- */
-  .section-title{
-    font-family:'Cinzel',serif;
-    font-size:13px;
-    letter-spacing:0.28em;
-    text-transform:uppercase;
-    color:var(--gold);
-    text-align:center;
-    margin:56px 0 18px;
+  .toc-group{margin-bottom:20px;}
+  .toc-group h3{font-family:'Cinzel',serif;font-weight:500;font-size:12px;letter-spacing:.24em;text-transform:uppercase;margin-bottom:6px;}
+  .toc-row{
+    display:flex;align-items:baseline;gap:8px;width:100%;background:none;border:0;cursor:pointer;text-align:left;
+    padding:7px 0;font-family:'Cormorant Garamond',serif;font-size:20px;color:var(--ink);
   }
-  .toc{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-    gap:14px;
-  }
-  .toc a{
-    display:flex;
-    align-items:center;
-    gap:14px;
-    text-decoration:none;
-    background:var(--paper);
-    border:1px solid var(--line);
-    padding:14px 16px;
-    transition:border-color .2s, transform .2s;
-  }
-  .toc a:hover{border-color:var(--gold);transform:translateY(-2px);}
-  .toc .num{
-    font-family:'Cormorant Garamond',serif;
-    font-size:30px;
-    color:var(--gold);
-    line-height:1;
-    min-width:30px;
-  }
-  .toc .t{font-family:'Cormorant Garamond',serif;font-size:20px;font-weight:600;line-height:1.2;}
-  .toc .c{font-size:11px;letter-spacing:0.16em;text-transform:uppercase;color:var(--muted);}
+  .toc-row .dots{flex:1;border-bottom:1px dotted #bdb3a2;transform:translateY(-5px);}
+  .toc-group .by{font-family:'Cormorant Garamond',serif;font-size:16px;font-style:italic;color:var(--muted);}
+  .toc-row:hover .t{color:var(--cranberry);}
 
-  /* ---------- Recipe cards ---------- */
-  .recipe{
-    background:var(--paper);
-    border:1px solid var(--line);
-    margin:28px 0;
-    scroll-margin-top:16px;
-    overflow:hidden;
+  /* ---------- Recipe page ---------- */
+  .ribbon{
+    position:absolute;top:0;right:26px;width:44px;padding:12px 0 18px;text-align:center;
+    color:#fff;font-family:'Cinzel',serif;font-size:9px;letter-spacing:.14em;text-transform:uppercase;
+    writing-mode:vertical-rl;clip-path:polygon(0 0,100% 0,100% 100%,50% 88%,0 100%);
   }
-  .recipe-head{
-    display:grid;
-    grid-template-columns:132px 1fr;
-    gap:22px;
-    align-items:center;
-    padding:26px 26px 22px;
-    border-bottom:1px solid var(--line);
-  }
-  .badge{
-    width:132px;height:132px;
-    border-radius:50%;
-    display:grid;place-items:center;
-  }
-  .badge svg{width:84px;height:84px;}
-  .appetizer .badge{background:var(--cranberry-soft);}
-  .main .badge{background:var(--evergreen-soft);}
-  .side .badge{background:#f5ecd8;}
-  .cat{
-    display:inline-block;
-    font-size:11px;
-    letter-spacing:0.2em;
-    text-transform:uppercase;
-    padding:4px 10px;
-    border-radius:20px;
-    margin-bottom:8px;
-  }
-  .appetizer .cat{background:var(--cranberry);color:#fff;}
-  .main .cat{background:var(--evergreen);color:#fff;}
-  .side .cat{background:var(--gold);color:var(--black);}
-  .recipe h3{
-    font-family:'Cormorant Garamond',serif;
-    font-weight:600;
-    font-size:clamp(28px,5vw,38px);
-    line-height:1.1;
-  }
-  .by{
-    font-family:'Cormorant Garamond',serif;
-    font-style:italic;
-    font-size:19px;
-    color:var(--muted);
-    margin-top:4px;
-  }
+  .rhead{display:flex;gap:18px;align-items:center;margin:4px 56px 18px 0;}
+  .badge{width:86px;height:86px;flex:0 0 86px;border-radius:50%;display:grid;place-items:center;}
+  .badge svg{width:56px;height:56px;}
+  .rhead h2{font-family:'Cormorant Garamond',serif;font-weight:600;font-size:clamp(28px,4.4vw,36px);line-height:1.08;}
+  .rhead .fam{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:19px;color:var(--muted);margin-top:2px;}
   .note{
-    margin:18px 26px 0;
-    padding:14px 18px;
-    border-left:3px solid var(--gold);
-    background:var(--ivory);
-    font-family:'Cormorant Garamond',serif;
-    font-style:italic;
-    font-size:19px;
+    margin:0 0 20px;padding:12px 16px;border-left:3px solid var(--gold);background:rgba(177,154,85,.08);
+    font-family:'Cormorant Garamond',serif;font-style:italic;font-size:18px;line-height:1.5;
   }
-  .recipe-body{
-    display:grid;
-    grid-template-columns:minmax(0,1fr) minmax(0,1.35fr);
-    gap:30px;
-    padding:24px 26px 28px;
-  }
-  .recipe h4{
-    font-family:'Cinzel',serif;
-    font-weight:500;
-    font-size:13px;
-    letter-spacing:0.22em;
-    text-transform:uppercase;
-    color:var(--cranberry);
-    margin-bottom:12px;
-  }
-  .main h4{color:var(--evergreen);}
-  .side h4{color:#8a7434;}
+  .rcols{display:grid;grid-template-columns:1fr;gap:20px;}
+  .page h4{font-family:'Cinzel',serif;font-weight:500;font-size:12px;letter-spacing:.22em;text-transform:uppercase;margin-bottom:8px;}
   .ing{list-style:none;}
   .ing li{border-bottom:1px dashed var(--line);}
-  .ing label{
-    display:flex;gap:10px;align-items:flex-start;
-    padding:8px 0;
-    cursor:pointer;
-    font-size:15.5px;
-  }
+  .ing label{display:flex;gap:10px;align-items:flex-start;padding:7px 0;cursor:pointer;font-size:15px;}
   .ing input{
-    appearance:none;-webkit-appearance:none;
-    width:18px;height:18px;flex:0 0 18px;
-    border:1.5px solid var(--gold);
-    border-radius:4px;
-    margin-top:3px;
-    display:grid;place-items:center;
-    cursor:pointer;
+    appearance:none;-webkit-appearance:none;width:18px;height:18px;flex:0 0 18px;border:1.5px solid var(--gold);
+    border-radius:4px;margin-top:3px;display:grid;place-items:center;cursor:pointer;background:#fff;
   }
   .ing input:checked{background:var(--gold);}
   .ing input:checked::after{content:"";width:5px;height:9px;border:solid #fff;border-width:0 2px 2px 0;transform:rotate(45deg) translate(-1px,-1px);}
   .ing input:checked + span{text-decoration:line-through;color:var(--muted);}
-  .hint{font-size:12px;color:var(--muted);margin-top:8px;}
   .steps{list-style:none;counter-reset:s;}
-  .steps li{
-    counter-increment:s;
-    position:relative;
-    padding:0 0 16px 42px;
-    font-size:15.5px;
-  }
+  .steps li{counter-increment:s;position:relative;padding:0 0 12px 38px;font-size:15px;}
   .steps li::before{
-    content:counter(s);
-    position:absolute;left:0;top:0;
-    width:28px;height:28px;border-radius:50%;
-    background:var(--black);color:var(--gold-soft);
-    font-family:'Cinzel',serif;font-size:13px;
-    display:grid;place-items:center;
+    content:counter(s);position:absolute;left:0;top:1px;width:26px;height:26px;border-radius:50%;
+    background:var(--black);color:var(--gold-soft);font-family:'Cinzel',serif;font-size:12px;display:grid;place-items:center;
   }
-  .steps strong{font-weight:600;}
-  .tip{
-    margin-top:6px;
-    font-size:14px;
-    background:var(--ivory);
-    padding:12px 14px;
-  }
-  .tools{
-    display:flex;gap:10px;flex-wrap:wrap;
-    padding:0 26px 24px;
-  }
+  .tip{font-size:14px;background:rgba(47,74,58,.08);padding:10px 14px;margin-top:4px;}
+  .tip strong{font-weight:600;}
+  .hint{font-size:12px;color:var(--muted);margin-top:6px;}
+
+  /* ---------- Bonus + share ---------- */
+  .bonus ol{padding-left:20px;margin-top:6px;}
+  .bonus li{margin-bottom:8px;font-size:15.5px;}
+  .bonus .art{width:120px;margin:0 auto 10px;}
+  .warn{font-size:13px;color:var(--muted);margin-top:14px;border-top:1px solid var(--line);padding-top:12px;}
+  .share{text-align:center;}
+  .share p{font-family:'Cormorant Garamond',serif;font-size:20px;max-width:380px;margin:0 auto 22px;}
   .btn{
-    font-family:'Jost',sans-serif;
-    font-size:12px;
-    letter-spacing:0.16em;
-    text-transform:uppercase;
-    border:1px solid var(--black);
-    background:transparent;
-    color:var(--black);
-    padding:10px 16px;
-    cursor:pointer;
-    text-decoration:none;
+    display:inline-block;font-size:12px;letter-spacing:.16em;text-transform:uppercase;padding:12px 18px;
+    background:var(--gold);color:var(--black);border:1px solid var(--gold);text-decoration:none;cursor:pointer;
   }
-  .btn:hover{background:var(--black);color:var(--ivory);}
-  .btn.gold{background:var(--gold);border-color:var(--gold);color:var(--black);}
-  .btn.gold:hover{background:var(--black);border-color:var(--black);color:var(--gold-soft);}
+  .btn:hover{background:var(--black);color:var(--gold-soft);border-color:var(--black);}
+  .lined{margin:26px auto 0;max-width:340px;}
+  .lined div{border-bottom:1px solid #d9cfbd;height:34px;}
 
-  /* ---------- Simmer pot ---------- */
-  .simmer{
-    background:var(--evergreen);
-    color:var(--ivory);
-    padding:34px 28px;
-    margin:44px 0 0;
-    display:grid;
-    grid-template-columns:110px 1fr;
-    gap:24px;
-    align-items:start;
+  /* ---------- Controls ---------- */
+  .controls{display:flex;align-items:center;justify-content:center;gap:18px;padding:16px 16px 22px;color:var(--ivory);}
+  .arrow{
+    width:46px;height:46px;border-radius:50%;border:1px solid rgba(205,184,126,.5);background:transparent;
+    color:var(--gold-soft);font-size:20px;cursor:pointer;display:grid;place-items:center;
   }
-  .simmer svg{width:110px;height:110px;}
-  .simmer h3{font-family:'Cormorant Garamond',serif;font-weight:500;font-size:32px;line-height:1.1;margin-bottom:10px;}
-  .simmer ol{padding-left:20px;}
-  .simmer li{margin-bottom:6px;font-size:15.5px;}
-  .simmer .small{font-size:13px;color:rgba(247,245,241,0.7);margin-top:10px;}
+  .arrow:hover:not(:disabled){background:rgba(205,184,126,.15);}
+  .arrow:disabled{opacity:.25;cursor:default;}
+  .pager{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:17px;min-width:110px;text-align:center;color:rgba(247,245,241,.8);}
+  .swipe-tip{text-align:center;color:rgba(247,245,241,.45);font-size:11px;letter-spacing:.14em;text-transform:uppercase;padding-bottom:20px;}
 
-  /* ---------- Share ---------- */
-  .share{
-    text-align:center;
-    background:var(--paper);
-    border:1px solid var(--line);
-    padding:38px 24px;
-    margin:44px 0;
+  /* ---------- Library ---------- */
+  .library{display:none;max-width:1000px;margin:0 auto;padding:10px 16px 40px;color:var(--ivory);text-align:center;}
+  .library.show{display:block;}
+  .library h2{font-family:'Cormorant Garamond',serif;font-weight:500;font-size:clamp(34px,6vw,48px);margin:10px 0 4px;}
+  .library .lede{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:19px;color:rgba(247,245,241,.7);}
+  .shelf{
+    display:flex;flex-wrap:wrap;justify-content:center;gap:34px;margin:40px 0 0;padding:0 10px 22px;
+    border-bottom:14px solid #3b2d22;box-shadow:0 18px 22px -16px rgba(0,0,0,.9);
   }
-  .share h3{font-family:'Cormorant Garamond',serif;font-weight:500;font-size:34px;line-height:1.1;margin-bottom:10px;}
-  .share p{max-width:520px;margin:0 auto 20px;color:var(--muted);}
+  .vol-book{
+    width:170px;height:240px;position:relative;cursor:pointer;border:0;
+    background:var(--black);color:var(--ivory);text-align:center;padding:26px 14px 14px 22px;
+    box-shadow:6px 8px 18px rgba(0,0,0,.6), inset 8px 0 0 rgba(255,255,255,.06), inset 10px 0 0 rgba(0,0,0,.4);
+    transition:transform .25s;
+    display:flex;flex-direction:column;align-items:center;justify-content:space-between;
+  }
+  .vol-book:hover{transform:translateY(-8px) rotate(-1deg);}
+  .vol-book .band{position:absolute;left:0;top:0;bottom:0;width:12px;}
+  .vol-book .y{font-family:'Cinzel',serif;font-size:11px;letter-spacing:.24em;color:var(--gold);}
+  .vol-book .n{font-family:'Cormorant Garamond',serif;font-size:26px;line-height:1.05;}
+  .vol-book .n em{color:var(--gold-soft);display:block;font-size:20px;}
+  .vol-book .c{font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:rgba(247,245,241,.55);}
+  .vol-book.next{
+    background:transparent;border:1px dashed rgba(205,184,126,.5);box-shadow:none;cursor:default;
+  }
+  .vol-book.next:hover{transform:none;}
+  .vol-book.next .n{color:rgba(247,245,241,.7);}
+  .lib-foot{margin-top:28px;font-size:12px;color:rgba(247,245,241,.55);}
+  .lib-foot a{color:var(--gold-soft);}
 
-  footer{
-    background:#050505;
-    color:rgba(247,245,241,0.55);
-    text-align:center;
-    padding:30px 20px 34px;
-    font-size:12px;
-    letter-spacing:0.08em;
-    line-height:1.9;
-  }
-  footer .exp-logo{width:150px;margin:0 auto 10px;}
-  .cover .exp-logo{width:130px;margin:0 auto 26px;opacity:0.95;}
-  footer span{color:var(--gold);}
-  footer a{color:var(--gold-soft);}
+  footer.site{text-align:center;color:rgba(247,245,241,.45);font-size:11px;letter-spacing:.08em;padding:0 16px 26px;}
+  footer.site img{width:90px;margin:0 auto 8px;opacity:.85;}
 
   @media (max-width:640px){
-    .cover{padding:56px 16px 80px;}
-    .letter{padding:28px 20px 24px;}
+    .bar{padding:10px 12px;gap:8px;}
+    .bar .title{font-size:9px;letter-spacing:.14em;}
+    .chip{padding:7px 9px;font-size:10px;letter-spacing:.1em;}
+    #printBtn{display:none;}
+    .page{padding:30px 20px 54px;}
+    .rhead{gap:14px;margin-right:46px;}
+    .badge{width:64px;height:64px;flex-basis:64px;}
+    .badge svg{width:42px;height:42px;}
+    .ribbon{right:16px;width:36px;}
     .letter p{font-size:18px;}
-    .recipe-head{grid-template-columns:84px 1fr;gap:16px;padding:20px 18px 18px;}
-    .badge{width:84px;height:84px;}
-    .badge svg{width:54px;height:54px;}
-    .note{margin:16px 18px 0;}
-    .recipe-body{grid-template-columns:1fr;gap:22px;padding:20px 18px 22px;}
-    .tools{padding:0 18px 20px;}
-    .simmer{grid-template-columns:1fr;padding:28px 20px;}
-    .simmer svg{width:80px;height:80px;}
+    .shelf{gap:20px;}
+    .vol-book{width:140px;height:200px;}
   }
+  @media (min-width:900px){ .rcols{grid-template-columns:minmax(0,1fr) minmax(0,1.3fr);gap:26px;} .book.spread .rcols{grid-template-columns:1fr;} }
 
   @media print{
+    @page{size:5.5in 8.5in;margin:0;}
     body{background:#fff;}
-    .cover{background:#fff;color:var(--black);padding:24px 0;}
-    .cover::before,.cover::after,.toc-wrap,.tools,.share,.hint{display:none !important;}
-    .cover .sub,.cover .meta{color:var(--muted);}
-    .letter{margin:0;box-shadow:none;}
-    .recipe{break-inside:avoid;page-break-inside:avoid;}
-    .simmer{background:#fff;color:var(--black);border:1px solid var(--line);}
-    .simmer .small{color:var(--muted);}
-    footer{background:#fff;color:var(--muted);}
-    .exp-logo{filter:invert(1);}
-    body.print-one .recipe:not(.printing),
-    body.print-one .cover,
-    body.print-one .letter,
-    body.print-one .section-title,
-    body.print-one .simmer{display:none !important;}
+    .bar,.controls,.swipe-tip,.library,footer.site,.hint{display:none !important;}
+    .stage{display:block;padding:0;perspective:none;}
+    .book,.book.spread{display:block;max-width:none;}
+    .book.spread::after{display:none;}
+    .page,.page.cover{display:block !important;height:auto !important;min-height:8.5in;overflow:visible !important;
+      box-shadow:none !important;page-break-after:always;break-after:page;animation:none !important;}
+    .page.cover{display:flex !important;flex-direction:column;justify-content:center;align-items:center;-webkit-print-color-adjust:exact;print-color-adjust:exact;}
+    .ribbon,.badge,.steps li::before{-webkit-print-color-adjust:exact;print-color-adjust:exact;}
   }
 </style>
 </head>
 <body>
 
-<header class="cover">
-  <img class="exp-logo" src="exp-realty-logo-white.png" alt="eXp Realty">
-  <svg class="sprig" viewBox="0 0 120 60" aria-hidden="true">
-    <g fill="none" stroke="#B19A55" stroke-width="1.4" stroke-linecap="round">
-      <path d="M8 44 C38 30, 82 30, 112 44"/>
-      <path d="M28 38 l-8 -10 M28 38 l-10 2 M46 34 l-6 -11 M46 34 l-11 -1 M74 34 l6 -11 M74 34 l11 -1 M92 38 l8 -10 M92 38 l10 2"/>
-    </g>
-    <circle cx="56" cy="42" r="4.5" fill="#8E1B2C"/>
-    <circle cx="64" cy="44" r="4.5" fill="#8E1B2C"/>
-    <circle cx="60" cy="36" r="4.5" fill="#a8293c"/>
-  </svg>
-  <div class="eyebrow">Holiday Kickoff 2026</div>
-  <h1>The Client Community <em>Holiday Recipe Book</em></h1>
-  <div class="sub">Favorite dishes, shared by the people who make a house feel like home</div>
-  <div class="rule"></div>
-  <div class="meta">Volume One &middot; Indianapolis &middot; 2026</div>
-</header>
+<div class="bar">
+  <button class="chip" id="libBtn" type="button">&#9776; Library</button>
+  <div class="title" id="barTitle">Holiday Recipe Book</div>
+  <button class="chip" id="printBtn" type="button">Print</button>
+</div>
 
-<main class="wrap">
+<section class="library" id="library" aria-label="All volumes">
+  <div class="eyebrow">The Collection</div>
+  <h2>Client Community Recipe Library</h2>
+  <p class="lede">One volume for every Holiday Kickoff</p>
+  <div class="shelf" id="shelf"></div>
+  <p class="lib-foot" id="libFoot"></p>
+</section>
 
-  <section class="letter">
-    <h2>A Note Before You Cook</h2>
-    <p>Thank you for being part of our client community. When we asked for the dish everyone asks you to bring, we hoped to end up with a little book of real recipes from real kitchens, and that is exactly what you sent.</p>
-    <p>Save this page to your phone, check off ingredients as you shop, and come back whenever you need a crowd pleaser this season. If your favorite is not here yet, there is still room.</p>
-    <p class="sig">With gratitude, Jessica &amp; Stacy</p>
-  </section>
-
-  <div class="toc-wrap">
-    <div class="section-title">Inside This Book</div>
-    <nav class="toc" aria-label="Recipes">
-      <a href="#cranberry-jalapeno-dip"><span class="num">01</span><span><span class="c">Appetizer</span><br><span class="t">Holiday Jalape&ntilde;o Cranberry Dip</span></span></a>
-      <a href="#cream-cheese-chicken-chili"><span class="num">02</span><span><span class="c">Main</span><br><span class="t">Cream Cheese Chicken Chili</span></span></a>
-      <a href="#cheesy-hash-brown-casserole"><span class="num">03</span><span><span class="c">Side</span><br><span class="t">Cheesy Hash Brown Casserole</span></span></a>
-      <a href="#simmer-pot"><span class="num">&#10045;</span><span><span class="c">Bonus</span><br><span class="t">Your Holiday Simmer Pot</span></span></a>
-    </nav>
+<div id="reader">
+  <div class="stage"><div class="book" id="book"></div></div>
+  <div class="controls">
+    <button class="arrow" id="prev" type="button" aria-label="Previous page">&#8249;</button>
+    <div class="pager" id="pager"></div>
+    <button class="arrow" id="next" type="button" aria-label="Next page">&#8250;</button>
   </div>
+  <div class="swipe-tip" id="swipeTip">Swipe or tap the arrows to turn the page</div>
+</div>
 
-  <div class="section-title">The Recipes</div>
-
-  <!-- 01 -->
-  <article class="recipe appetizer" id="cranberry-jalapeno-dip">
-    <div class="recipe-head">
-      <div class="badge" aria-hidden="true">
-        <svg viewBox="0 0 84 84"><ellipse cx="42" cy="54" rx="32" ry="12" fill="#fff" stroke="#8E1B2C" stroke-width="2"/><path d="M14 52 Q42 30 70 52" fill="#fbf6ee"/><g fill="#8E1B2C"><circle cx="32" cy="44" r="4"/><circle cx="41" cy="41" r="4.3"/><circle cx="50" cy="44" r="4"/><circle cx="37" cy="48" r="3.6"/><circle cx="46" cy="48" r="3.6"/></g><path d="M56 30 q8 -6 14 2 q-6 8 -14 -2z" fill="#2F4A3A"/><path d="M60 30 l-4 -6" stroke="#2F4A3A" stroke-width="2" stroke-linecap="round"/></svg>
-      </div>
-      <div>
-        <span class="cat">Appetizer</span>
-        <h3>Holiday Jalape&ntilde;o Cranberry Dip</h3>
-        <div class="by">Shared by the Schoettmer Family</div>
-      </div>
-    </div>
-    <div class="recipe-body">
-      <div>
-        <h4>Ingredients</h4>
-        <ul class="ing">
-          <li><label><input type="checkbox"><span>12 oz fresh cranberries</span></label></li>
-          <li><label><input type="checkbox"><span>1 fresh jalape&ntilde;o, seeded</span></label></li>
-          <li><label><input type="checkbox"><span>1 cup sugar</span></label></li>
-          <li><label><input type="checkbox"><span>Lime juice, to taste</span></label></li>
-          <li><label><input type="checkbox"><span>16 oz cream cheese, at room temperature</span></label></li>
-          <li><label><input type="checkbox"><span>1/4 cup sour cream</span></label></li>
-          <li><label><input type="checkbox"><span>Pinch of salt</span></label></li>
-          <li><label><input type="checkbox"><span>4 sprigs cilantro, plus extra to garnish</span></label></li>
-          <li><label><input type="checkbox"><span>Crackers of your choice, for serving</span></label></li>
-        </ul>
-        <p class="hint">Tap to check off ingredients as you shop.</p>
-      </div>
-      <div>
-        <h4>Directions</h4>
-        <ol class="steps">
-          <li>In a food processor, pulse the cranberries and jalape&ntilde;o until finely chopped. Strain off any extra cranberry juice.</li>
-          <li>In a bowl, stir together the cranberry mixture, sugar, lime juice, salt, and cilantro.</li>
-          <li>In a separate bowl, blend the cream cheese and sour cream until smooth. Spread it onto a festive tray or into a shallow bowl.</li>
-          <li>Spoon the cranberry jalape&ntilde;o mixture over the top, garnish with extra cilantro if you like, and serve with crackers.</li>
-        </ol>
-      </div>
-    </div>
-    <div class="tools">
-      <button class="btn" onclick="printOne('cranberry-jalapeno-dip')">Print this recipe</button>
-    </div>
-  </article>
-
-  <!-- 02 -->
-  <article class="recipe main" id="cream-cheese-chicken-chili">
-    <div class="recipe-head">
-      <div class="badge" aria-hidden="true">
-        <svg viewBox="0 0 84 84"><rect x="16" y="34" width="52" height="30" rx="8" fill="#fff" stroke="#2F4A3A" stroke-width="2"/><rect x="12" y="28" width="60" height="9" rx="4.5" fill="#2F4A3A"/><rect x="36" y="20" width="12" height="7" rx="3" fill="#2F4A3A"/><path d="M8 46 h8 M68 46 h8" stroke="#2F4A3A" stroke-width="3" stroke-linecap="round"/><path d="M30 16 q-4 -5 0 -10 M42 14 q-4 -5 0 -10 M54 16 q-4 -5 0 -10" stroke="#B19A55" stroke-width="1.8" fill="none" stroke-linecap="round"/></svg>
-      </div>
-      <div>
-        <span class="cat">Main</span>
-        <h3>Cream Cheese Chicken Chili</h3>
-        <div class="by">Shared by the Foreman Family</div>
-      </div>
-    </div>
-    <p class="note">"Not really a holiday one," the Foremans told us, and it did not even have a name until this book. It is a slow cooker recipe, which makes it a gift on a busy holiday weekend.</p>
-    <div class="recipe-body">
-      <div>
-        <h4>Ingredients</h4>
-        <ul class="ing">
-          <li><label><input type="checkbox"><span>2 large chicken breasts</span></label></li>
-          <li><label><input type="checkbox"><span>1 can black beans, drained</span></label></li>
-          <li><label><input type="checkbox"><span>1 can corn</span></label></li>
-          <li><label><input type="checkbox"><span>1 can Rotel tomatoes</span></label></li>
-          <li><label><input type="checkbox"><span>8 oz cream cheese</span></label></li>
-          <li><label><input type="checkbox"><span>1 packet ranch dip mix</span></label></li>
-          <li><label><input type="checkbox"><span>1/2 packet taco seasoning</span></label></li>
-          <li><label><input type="checkbox"><span>1 tbsp chili powder</span></label></li>
-          <li><label><input type="checkbox"><span>1 tsp cumin</span></label></li>
-          <li><label><input type="checkbox"><span>1 tsp onion powder</span></label></li>
-        </ul>
-        <p class="hint">Tap to check off ingredients as you shop.</p>
-      </div>
-      <div>
-        <h4>Directions</h4>
-        <ol class="steps">
-          <li>In a slow cooker, mix the beans, corn, tomatoes, chili powder, onion powder, cumin, and ranch mix until well combined.</li>
-          <li>Press the chicken down into the mixture and sprinkle the taco seasoning over the chicken.</li>
-          <li>Add the cream cheese beside the chicken, not on top of it. Cutting the block in half makes this easier.</li>
-          <li>Cook on low for 6 to 7 hours, until the chicken falls apart easily with a fork.</li>
-          <li>Move the chicken to a bowl, shred it, and return it to the slow cooker. Stir until the cream cheese is fully melted and combined.</li>
-        </ol>
-        <p class="tip"><strong>Make it a dip:</strong> shred the chicken extra fine and serve it warm with chips.</p>
-      </div>
-    </div>
-    <div class="tools">
-      <button class="btn" onclick="printOne('cream-cheese-chicken-chili')">Print this recipe</button>
-    </div>
-  </article>
-
-  <!-- 03 -->
-  <article class="recipe side" id="cheesy-hash-brown-casserole">
-    <div class="recipe-head">
-      <div class="badge" aria-hidden="true">
-        <svg viewBox="0 0 84 84"><rect x="10" y="32" width="64" height="30" rx="5" fill="#fff" stroke="#8a7434" stroke-width="2"/><path d="M4 40 h6 M74 40 h6" stroke="#8a7434" stroke-width="3" stroke-linecap="round"/><path d="M14 36 q6 -6 12 0 q6 -6 12 0 q6 -6 12 0 q6 -6 12 0 q6 -6 6 0 v6 h-54z" fill="#E8B84A"/><g fill="#c8902a"><circle cx="22" cy="40" r="1.8"/><circle cx="36" cy="39" r="1.8"/><circle cx="50" cy="41" r="1.8"/><circle cx="62" cy="39" r="1.8"/></g></svg>
-      </div>
-      <div>
-        <span class="cat">Side</span>
-        <h3>Cheesy Hash Brown Casserole</h3>
-        <div class="by">Shared by the Williams Family</div>
-      </div>
-    </div>
-    <div class="recipe-body">
-      <div>
-        <h4>Ingredients</h4>
-        <ul class="ing">
-          <li><label><input type="checkbox"><span>1 bag (30 oz) frozen shredded hash browns, thawed</span></label></li>
-          <li><label><input type="checkbox"><span>1 can (10.5 oz) cream of chicken soup</span></label></li>
-          <li><label><input type="checkbox"><span>1 cup sour cream</span></label></li>
-          <li><label><input type="checkbox"><span>2 cups shredded cheddar cheese, divided</span></label></li>
-          <li><label><input type="checkbox"><span>1/2 cup butter, melted</span></label></li>
-          <li><label><input type="checkbox"><span>1/2 cup finely chopped onion</span></label></li>
-          <li><label><input type="checkbox"><span>1/2 tsp garlic powder</span></label></li>
-          <li><label><input type="checkbox"><span>1/2 tsp salt</span></label></li>
-          <li><label><input type="checkbox"><span>1/4 tsp black pepper</span></label></li>
-          <li><label><input type="checkbox"><span>1 1/2 cups crushed cornflakes or buttery crackers</span></label></li>
-          <li><label><input type="checkbox"><span>3 tbsp butter, melted, for the topping</span></label></li>
-        </ul>
-        <p class="hint">Tap to check off ingredients as you shop.</p>
-      </div>
-      <div>
-        <h4>Directions</h4>
-        <ol class="steps">
-          <li>Heat the oven to 350&deg;F and lightly grease a 9x13 baking dish.</li>
-          <li>In a large bowl, stir together the soup, sour cream, 1/2 cup melted butter, 1 1/2 cups of the cheddar, onion, garlic powder, salt, and pepper until smooth.</li>
-          <li>Fold in the hash browns until they are evenly coated, then spread the mixture into the dish.</li>
-          <li>Sprinkle the remaining 1/2 cup of cheddar over the top.</li>
-          <li>Toss the crushed cornflakes with the 3 tbsp melted butter and scatter them over the casserole.</li>
-          <li>Bake uncovered for 45 to 50 minutes, until bubbly and golden brown.</li>
-        </ol>
-      </div>
-    </div>
-    <div class="tools">
-      <button class="btn" onclick="printOne('cheesy-hash-brown-casserole')">Print this recipe</button>
-    </div>
-  </article>
-
-  <!-- Simmer pot -->
-  <section class="simmer" id="simmer-pot">
-    <svg viewBox="0 0 110 110" aria-hidden="true"><circle cx="55" cy="55" r="52" fill="none" stroke="#B19A55" stroke-width="1.2"/><circle cx="42" cy="60" r="14" fill="#E8913A"/><circle cx="42" cy="60" r="9" fill="none" stroke="#f7d29a" stroke-width="1.4"/><path d="M42 51 v18 M33 60 h18 M36 54 l12 12 M48 54 l-12 12" stroke="#f7d29a" stroke-width="1"/><g fill="#a8293c"><circle cx="66" cy="66" r="5"/><circle cx="74" cy="58" r="5"/><circle cx="64" cy="54" r="4.5"/></g><rect x="56" y="34" width="26" height="6" rx="3" fill="#8b5a2b" transform="rotate(-24 69 37)"/><path d="M30 34 q10 -12 22 -6 M36 30 l-4 -6 M44 27 l0 -7" stroke="#cfe0d3" stroke-width="2" fill="none" stroke-linecap="round"/></svg>
-    <div>
-      <div class="eyebrow">Bonus &middot; From Your Gift Bag</div>
-      <h3>Your Holiday Simmer Pot</h3>
-      <ol>
-        <li>Empty your kit into a medium saucepan and cover with a few inches of water.</li>
-        <li>Bring it to a gentle boil, then turn the heat down to the lowest simmer.</li>
-        <li>Add water every 30 minutes or so to keep everything covered.</li>
-        <li>Turn it off when you leave the room. Cooled contents keep in the fridge for a day or two of reuse.</li>
-      </ol>
-      <p class="small">Never leave a simmer pot unattended on the stove, and keep it out of reach of kids and pets. The contents are for scent only, not for eating.</p>
-    </div>
-  </section>
-
-  <!-- Share -->
-  <section class="share">
-    <div class="eyebrow">Volume Two Starts Now</div>
-    <h3>Have a favorite we are missing?</h3>
-    <p>Send us the dish everyone asks you to bring, plus a line about why it matters to your family, and we will add it to the book.</p>
-    <a class="btn gold" href="mailto:jw.indyrealestate@gmail.com?subject=Recipe%20for%20the%20Holiday%20Recipe%20Book">Email your recipe</a>
-  </section>
-
-</main>
-
-<footer>
-  <img class="exp-logo" src="exp-realty-logo-white.png" alt="eXp Realty">
-  Jessica Williams &amp; Stacy Preston, REALTORS&reg; &middot; <span>eXp Realty</span><br>
-  Recipes shared by clients for personal, non-commercial use.
+<footer class="site">
+  <img src="exp-realty-logo-white.png" alt="eXp Realty">
+  <span id="footHosts"></span><br>Recipes shared by clients for personal, non-commercial use.
 </footer>
 
+<script src="recipes.js"></script>
 <script>
-  function printOne(id){
-    var el=document.getElementById(id);
-    document.body.classList.add('print-one');
-    el.classList.add('printing');
-    window.print();
-    setTimeout(function(){
-      document.body.classList.remove('print-one');
-      el.classList.remove('printing');
-    },500);
+(function(){
+  var DATA = window.RECIPE_BOOK;
+  var CAT_ORDER = ["Appetizer","Breakfast","Main","Side","Dessert","Drink"];
+  var CAT = {
+    Appetizer:{color:"#8E1B2C", tint:"#f3e3e4", plural:"Appetizers"},
+    Breakfast:{color:"#B07A2A", tint:"#f6ead6", plural:"Breakfast & Brunch"},
+    Main:{color:"#2F4A3A", tint:"#e4ece6", plural:"Mains"},
+    Side:{color:"#8a7434", tint:"#f5ecd8", plural:"Sides"},
+    Dessert:{color:"#7a3b5c", tint:"#f1e3ea", plural:"Desserts"},
+    Drink:{color:"#2d4f6b", tint:"#e2eaf1", plural:"Drinks"}
+  };
+  var ICON = {
+    Appetizer:'<svg viewBox="0 0 84 84"><ellipse cx="42" cy="54" rx="32" ry="12" fill="#fff" stroke="#8E1B2C" stroke-width="2"/><path d="M14 52 Q42 30 70 52" fill="#fbf6ee"/><g fill="#8E1B2C"><circle cx="32" cy="44" r="4"/><circle cx="41" cy="41" r="4.3"/><circle cx="50" cy="44" r="4"/><circle cx="37" cy="48" r="3.6"/><circle cx="46" cy="48" r="3.6"/></g><path d="M56 30 q8 -6 14 2 q-6 8 -14 -2z" fill="#2F4A3A"/></svg>',
+    Main:'<svg viewBox="0 0 84 84"><rect x="16" y="34" width="52" height="30" rx="8" fill="#fff" stroke="#2F4A3A" stroke-width="2"/><rect x="12" y="28" width="60" height="9" rx="4.5" fill="#2F4A3A"/><rect x="36" y="20" width="12" height="7" rx="3" fill="#2F4A3A"/><path d="M8 46 h8 M68 46 h8" stroke="#2F4A3A" stroke-width="3" stroke-linecap="round"/><path d="M30 16 q-4 -5 0 -10 M42 14 q-4 -5 0 -10 M54 16 q-4 -5 0 -10" stroke="#B19A55" stroke-width="1.8" fill="none" stroke-linecap="round"/></svg>',
+    Side:'<svg viewBox="0 0 84 84"><rect x="10" y="32" width="64" height="30" rx="5" fill="#fff" stroke="#8a7434" stroke-width="2"/><path d="M4 40 h6 M74 40 h6" stroke="#8a7434" stroke-width="3" stroke-linecap="round"/><path d="M14 36 q6 -6 12 0 q6 -6 12 0 q6 -6 12 0 q6 -6 12 0 q6 -6 6 0 v6 h-54z" fill="#E8B84A"/><g fill="#c8902a"><circle cx="22" cy="40" r="1.8"/><circle cx="36" cy="39" r="1.8"/><circle cx="50" cy="41" r="1.8"/><circle cx="62" cy="39" r="1.8"/></g></svg>',
+    Dessert:'<svg viewBox="0 0 84 84"><path d="M12 56 L42 22 L72 56 Z" fill="#E8A65A" stroke="#7a3b5c" stroke-width="2" stroke-linejoin="round"/><path d="M12 56 h60 v8 h-60z" fill="#c98a3f" stroke="#7a3b5c" stroke-width="2"/><path d="M30 44 q12 6 24 0" stroke="#fff" stroke-width="3" fill="none" stroke-linecap="round"/></svg>',
+    Drink:'<svg viewBox="0 0 84 84"><path d="M22 30 h34 v24 a14 14 0 0 1 -14 14 h-6 a14 14 0 0 1 -14 -14z" fill="#fff" stroke="#2d4f6b" stroke-width="2"/><path d="M56 36 h6 a7 7 0 0 1 0 14 h-6" fill="none" stroke="#2d4f6b" stroke-width="2"/><path d="M32 22 q-4 -5 0 -10 M44 22 q-4 -5 0 -10" stroke="#B19A55" stroke-width="1.8" fill="none" stroke-linecap="round"/></svg>',
+    Breakfast:'<svg viewBox="0 0 84 84"><ellipse cx="42" cy="50" rx="30" ry="14" fill="#fff" stroke="#B07A2A" stroke-width="2"/><ellipse cx="42" cy="48" rx="14" ry="9" fill="#fdf3dc"/><circle cx="42" cy="47" r="6" fill="#F2B632"/></svg>'
+  };
+  var SPRIG = '<svg class="sprig" viewBox="0 0 120 60" aria-hidden="true"><g fill="none" stroke="#B19A55" stroke-width="1.4" stroke-linecap="round"><path d="M8 44 C38 30, 82 30, 112 44"/><path d="M28 38 l-8 -10 M28 38 l-10 2 M46 34 l-6 -11 M46 34 l-11 -1 M74 34 l6 -11 M74 34 l11 -1 M92 38 l8 -10 M92 38 l10 2"/></g><circle cx="56" cy="42" r="4.5" fill="#8E1B2C"/><circle cx="64" cy="44" r="4.5" fill="#8E1B2C"/><circle cx="60" cy="36" r="4.5" fill="#a8293c"/></svg>';
+  var POT = '<svg class="art" viewBox="0 0 110 110" aria-hidden="true"><circle cx="55" cy="55" r="52" fill="none" stroke="#B19A55" stroke-width="1.2"/><circle cx="42" cy="60" r="14" fill="#E8913A"/><circle cx="42" cy="60" r="9" fill="none" stroke="#f7d29a" stroke-width="1.4"/><g fill="#a8293c"><circle cx="66" cy="66" r="5"/><circle cx="74" cy="58" r="5"/><circle cx="64" cy="54" r="4.5"/></g><rect x="56" y="34" width="26" height="6" rx="3" fill="#8b5a2b" transform="rotate(-24 69 37)"/><path d="M30 34 q10 -12 22 -6 M36 30 l-4 -6 M44 27 l0 -7" stroke="#2F4A3A" stroke-width="2" fill="none" stroke-linecap="round"/></svg>';
+
+  function esc(s){return String(s).replace(/[&<>"]/g,function(c){return {"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c];});}
+  function store(k,v){try{ if(v===undefined) return localStorage.getItem(k); localStorage.setItem(k,v);}catch(e){return null;}}
+
+  var vol, pages, idx = 0, spread = false;
+  var book = document.getElementById("book");
+
+  function sortedRecipes(v){
+    return v.recipes.slice().sort(function(a,b){
+      var d = CAT_ORDER.indexOf(a.category) - CAT_ORDER.indexOf(b.category);
+      return d !== 0 ? d : 0;
+    });
   }
+
+  function buildPages(v){
+    var p = [], recipes = sortedRecipes(v);
+    var run = '<div class="running">Volume ' + esc(v.number) + ' &middot; ' + v.year + '</div>';
+
+    p.push({cls:"cover", html:
+      '<div class="frame"></div><img class="logo" src="exp-realty-logo-white.png" alt="eXp Realty">' + SPRIG +
+      '<div class="eyebrow">' + esc(v.event) + '</div>' +
+      '<h1>The Client Community <em>' + esc(v.title) + '</em></h1>' +
+      '<div class="sub">Favorite dishes, shared by the people who make a house feel like home</div>' +
+      '<div class="vol">Volume ' + esc(v.number) + ' &middot; ' + v.year + '</div>' +
+      '<div class="open-hint">Turn the page &#8250;</div>'});
+
+    p.push({cls:"letter", html: run +
+      '<h2>A Note Before You Cook</h2><div class="orn"></div>' +
+      v.letter.map(function(t){return '<p>' + esc(t) + '</p>';}).join("") +
+      '<p class="sig">With gratitude, ' + esc(DATA.signoff) + '</p>'});
+
+    var firstRecipePage = 3;
+    var toc = run + '<h2>Contents</h2><div class="orn"></div>';
+    var groups = {};
+    recipes.forEach(function(r,i){ (groups[r.category] = groups[r.category] || []).push({r:r, page:firstRecipePage + i}); });
+    CAT_ORDER.forEach(function(c){
+      if(!groups[c]) return;
+      toc += '<div class="toc-group"><h3 style="color:' + CAT[c].color + '">' + CAT[c].plural + '</h3>';
+      groups[c].forEach(function(g){
+        toc += '<button class="toc-row" data-go="' + g.page + '"><span class="t">' + esc(g.r.title) + '</span><span class="dots"></span><span>' + g.page + '</span></button>' +
+               '<div class="by" style="margin:-6px 0 4px">' + esc(g.r.family) + '</div>';
+      });
+      toc += '</div>';
+    });
+    var bonusPage = firstRecipePage + recipes.length;
+    toc += '<div class="toc-group"><h3 style="color:var(--gold)">Extras</h3>' +
+      '<button class="toc-row" data-go="' + bonusPage + '"><span class="t">Your Holiday Simmer Pot</span><span class="dots"></span><span>' + bonusPage + '</span></button>' +
+      '<button class="toc-row" data-go="' + (bonusPage + 1) + '"><span class="t">Add Your Recipe</span><span class="dots"></span><span>' + (bonusPage + 1) + '</span></button></div>';
+    p.push({cls:"contents", html: toc});
+
+    recipes.forEach(function(r){
+      var c = CAT[r.category] || CAT.Main;
+      var h = run +
+        '<div class="ribbon" style="background:' + c.color + '">' + esc(r.category) + '</div>' +
+        '<div class="rhead"><div class="badge" style="background:' + c.tint + '">' + (ICON[r.category] || ICON.Main) + '</div>' +
+        '<div><h2>' + esc(r.title) + '</h2><div class="fam">Shared by the ' + esc(r.family) + '</div></div></div>' +
+        (r.note ? '<p class="note">' + esc(r.note) + '</p>' : '') +
+        '<div class="rcols"><div><h4 style="color:' + c.color + '">Ingredients</h4><ul class="ing">' +
+        r.ingredients.map(function(t,i){
+          var key = 'rb-' + v.id + '-' + r.id + '-' + i;
+          return '<li><label><input type="checkbox" data-key="' + key + '"' + (store(key) === '1' ? ' checked' : '') + '><span>' + esc(t) + '</span></label></li>';
+        }).join("") +
+        '</ul><p class="hint">Tap to check off as you shop.</p></div>' +
+        '<div><h4 style="color:' + c.color + '">Directions</h4><ol class="steps">' +
+        r.steps.map(function(t){return '<li>' + esc(t) + '</li>';}).join("") + '</ol>' +
+        (r.tip ? '<p class="tip"><strong>Tip:</strong> ' + esc(r.tip) + '</p>' : '') +
+        '</div></div>';
+      p.push({cls:"recipe", html:h});
+    });
+
+    p.push({cls:"bonus", html: run + POT +
+      '<h2 class="sec">Your Holiday Simmer Pot</h2><div class="orn"></div>' +
+      '<p style="text-align:center;font-family:\'Cormorant Garamond\',serif;font-style:italic;font-size:18px;">From your gift bag</p>' +
+      '<ol><li>Empty your kit into a medium saucepan and cover with a few inches of water.</li>' +
+      '<li>Bring it to a gentle boil, then turn the heat down to the lowest simmer.</li>' +
+      '<li>Add water every 30 minutes or so to keep everything covered.</li>' +
+      '<li>Turn it off when you leave the room. Cooled contents keep in the fridge for a day or two of reuse.</li></ol>' +
+      '<p class="warn">Never leave a simmer pot unattended on the stove, and keep it out of reach of kids and pets. The contents are for scent only, not for eating.</p>'});
+
+    p.push({cls:"share", html: run +
+      '<h2 class="sec">Add Your Recipe</h2><div class="orn"></div>' +
+      '<p>Have a favorite we are missing? Send us the dish everyone asks you to bring, plus a line about why it matters to your family, and we will add it to the book.</p>' +
+      '<a class="btn" href="mailto:' + DATA.submitEmail + '?subject=' + encodeURIComponent('Recipe for the Holiday Recipe Book') + '">Email your recipe</a>' +
+      '<div class="lined"><div></div><div></div><div></div><div></div></div>' +
+      '<p style="font-size:15px;margin-top:10px;font-style:italic;color:var(--muted)">Room for your notes</p>'});
+
+    p.push({cls:"cover back", html:
+      '<div class="frame"></div>' + SPRIG +
+      '<div class="eyebrow">With Gratitude</div>' +
+      '<h1 style="font-size:clamp(30px,5vw,42px)">Thank you for <em>sharing your table</em></h1>' +
+      '<div class="sub">From our kitchens to yours, happy holidays.</div>' +
+      '<img class="logo" style="margin-top:34px" src="exp-realty-logo-white.png" alt="eXp Realty">' +
+      '<div class="hosts">' + esc(DATA.hosts) + ', REALTORS&reg; &middot; ' + esc(DATA.brokerage) + '</div>'});
+    return p;
+  }
+
+  function renderBook(){
+    book.innerHTML = pages.map(function(pg,i){
+      var folio = (i > 0 && i < pages.length - 1) ? '<div class="folio">' + i + '</div>' : '';
+      return '<article class="page ' + pg.cls + '" data-i="' + i + '">' + pg.html + folio + '</article>';
+    }).join("");
+    book.querySelectorAll(".toc-row").forEach(function(b){
+      b.addEventListener("click",function(){ go(parseInt(b.getAttribute("data-go"),10)); });
+    });
+    book.querySelectorAll(".ing input").forEach(function(cb){
+      cb.addEventListener("change",function(){ store(cb.getAttribute("data-key"), cb.checked ? '1' : '0'); });
+    });
+  }
+
+  function visible(i){
+    if(!spread) return [i];
+    var last = pages.length - 1;
+    if(i === 0) return [0];
+    if(i === last) return [last];
+    var l = (i % 2 === 1) ? i : i - 1;
+    return (l + 1 < last) ? [l, l + 1] : [l];
+  }
+
+  function show(dir){
+    var vis = visible(idx);
+    book.classList.toggle("spread", spread);
+    book.classList.toggle("solo", spread && vis.length === 1);
+    book.querySelectorAll(".page").forEach(function(el){
+      var i = parseInt(el.getAttribute("data-i"),10), on = vis.indexOf(i) > -1;
+      el.classList.remove("show","left","right","turn-next","turn-prev");
+      if(on){
+        el.classList.add("show");
+        if(vis.length === 2) el.classList.add(i === vis[0] ? "left" : "right");
+        if(dir) { void el.offsetWidth; el.classList.add(dir > 0 ? "turn-next" : "turn-prev"); }
+        el.scrollTop = 0;
+      }
+    });
+    var first = vis[0], lastV = vis[vis.length - 1];
+    document.getElementById("prev").disabled = first === 0;
+    document.getElementById("next").disabled = lastV === pages.length - 1;
+    var label;
+    if(first === 0) label = "Cover";
+    else if(lastV === pages.length - 1 && vis.length === 1) label = "Back cover";
+    else label = vis.length === 2 ? "Pages " + first + " & " + lastV : "Page " + first;
+    document.getElementById("pager").textContent = label + " of " + (pages.length - 2);
+    try{ history.replaceState(null, "", "#" + vol.id + "/" + first); }catch(e){}
+    if(dir) window.scrollTo({top:0, behavior:"smooth"});
+  }
+
+  function go(i, dir){
+    i = Math.max(0, Math.min(pages.length - 1, i));
+    var d = dir || (i > idx ? 1 : -1);
+    idx = i; show(d);
+  }
+  function step(d){
+    var vis = visible(idx);
+    var target = d > 0 ? vis[vis.length - 1] + 1 : vis[0] - 1;
+    if(target < 0 || target > pages.length - 1) return;
+    go(target, d);
+  }
+
+  function openVolume(id, page){
+    vol = DATA.volumes.filter(function(v){return v.id === String(id);})[0] || DATA.volumes[0];
+    pages = buildPages(vol);
+    document.getElementById("barTitle").textContent = "Volume " + vol.number + " · " + vol.year;
+    document.title = "Holiday Recipe Book, Volume " + vol.number + " (" + vol.year + ")";
+    renderBook();
+    document.getElementById("library").classList.remove("show");
+    document.getElementById("reader").style.display = "";
+    idx = page || 0; show(0);
+  }
+
+  function openLibrary(){
+    var shelf = document.getElementById("shelf");
+    shelf.innerHTML = DATA.volumes.map(function(v){
+      return '<button class="vol-book" type="button" data-vol="' + v.id + '"><span class="band" style="background:' + (v.color || '#8E1B2C') + '"></span>' +
+        '<span class="y">' + v.year + '</span><span class="n">Volume<em>' + esc(v.number) + '</em></span>' +
+        '<span class="c">' + v.recipes.length + ' recipe' + (v.recipes.length === 1 ? '' : 's') + '</span></button>';
+    }).join("") +
+      '<div class="vol-book next"><span class="y">' + (DATA.volumes[0].year + 1) + '</span><span class="n">Next Volume<em>Save your favorites</em></span><span class="c">Coming soon</span></div>';
+    shelf.querySelectorAll("[data-vol]").forEach(function(b){
+      b.addEventListener("click",function(){ openVolume(b.getAttribute("data-vol"), 0); });
+    });
+    document.getElementById("libFoot").innerHTML = 'Have a recipe for the next volume? <a href="mailto:' + DATA.submitEmail + '?subject=' + encodeURIComponent('Recipe for the next Holiday Recipe Book') + '">Send it anytime</a>.';
+    document.getElementById("reader").style.display = "none";
+    document.getElementById("library").classList.add("show");
+    document.getElementById("barTitle").textContent = "Recipe Library";
+    try{ history.replaceState(null, "", "#library"); }catch(e){}
+  }
+
+  function setLayout(){
+    var was = spread;
+    spread = window.innerWidth >= 1000;
+    if(pages && was !== spread) show(0);
+  }
+
+  document.getElementById("prev").addEventListener("click",function(){ step(-1); });
+  document.getElementById("next").addEventListener("click",function(){ step(1); });
+  document.getElementById("libBtn").addEventListener("click",function(){
+    if(document.getElementById("library").classList.contains("show")) openVolume(vol ? vol.id : DATA.volumes[0].id, idx);
+    else openLibrary();
+  });
+  document.getElementById("printBtn").addEventListener("click",function(){
+    if(document.getElementById("library").classList.contains("show")) openVolume(DATA.volumes[0].id, 0);
+    window.print();
+  });
+  document.addEventListener("keydown",function(e){
+    if(document.getElementById("library").classList.contains("show")) return;
+    if(e.key === "ArrowRight") step(1);
+    if(e.key === "ArrowLeft") step(-1);
+  });
+  var sx = null, sy = null;
+  book.addEventListener("touchstart",function(e){ sx = e.touches[0].clientX; sy = e.touches[0].clientY; },{passive:true});
+  book.addEventListener("touchend",function(e){
+    if(sx === null) return;
+    var dx = e.changedTouches[0].clientX - sx, dy = e.changedTouches[0].clientY - sy;
+    if(Math.abs(dx) > 60 && Math.abs(dx) > Math.abs(dy) * 1.5) step(dx < 0 ? 1 : -1);
+    sx = null;
+  },{passive:true});
+  window.addEventListener("resize", setLayout);
+
+  document.getElementById("footHosts").textContent = DATA.hosts + ", REALTORS® · " + DATA.brokerage;
+  setLayout();
+  var h = (location.hash || "").replace("#","");
+  if(h === "library") { openVolume(DATA.volumes[0].id, 0); openLibrary(); }
+  else { var parts = h.split("/"); openVolume(parts[0] || DATA.volumes[0].id, parseInt(parts[1],10) || 0); }
+})();
 </script>
 </body>
 </html>
