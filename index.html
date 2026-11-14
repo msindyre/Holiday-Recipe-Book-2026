@@ -442,7 +442,7 @@
     if(first === 0) label = "Cover";
     else if(lastV === pages.length - 1 && vis.length === 1) label = "Back cover";
     else label = vis.length === 2 ? "Pages " + first + " & " + lastV : "Page " + first;
-    document.getElementById("pager").textContent = label + " of " + (pages.length - 2);
+    document.getElementById("pager").textContent = /cover/i.test(label) ? label : label + " of " + (pages.length - 2);
     try{ history.replaceState(null, "", "#" + vol.id + "/" + first); }catch(e){}
     if(dir) window.scrollTo({top:0, behavior:"smooth"});
   }
