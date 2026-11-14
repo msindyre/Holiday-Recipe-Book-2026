@@ -1,0 +1,599 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow">
+<title>Client Community Holiday Recipe Book 2026</title>
+<meta name="description" content="Favorite holiday recipes shared by our client community, Holiday Kickoff 2026.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --black:#0a0a0a;
+    --ink:#1d1b18;
+    --gold:#B19A55;
+    --gold-soft:#cdb87e;
+    --ivory:#F7F5F1;
+    --paper:#fffdf9;
+    --cranberry:#8E1B2C;
+    --cranberry-soft:#f3e3e4;
+    --evergreen:#2F4A3A;
+    --evergreen-soft:#e4ece6;
+    --muted:#6d675e;
+    --line:#e6dfd2;
+  }
+  *{box-sizing:border-box;margin:0;padding:0;}
+  html{scroll-behavior:smooth;}
+  body{
+    background:var(--ivory);
+    color:var(--ink);
+    font-family:'Jost',sans-serif;
+    font-weight:400;
+    line-height:1.6;
+    -webkit-font-smoothing:antialiased;
+  }
+  img{max-width:100%;display:block;}
+  a{color:inherit;}
+
+  /* ---------- Cover ---------- */
+  .cover{
+    position:relative;
+    background:var(--black);
+    color:var(--ivory);
+    text-align:center;
+    padding:72px 20px 88px;
+    overflow:hidden;
+  }
+  .cover::before,.cover::after{
+    content:"";
+    position:absolute;
+    width:340px;height:340px;
+    border-radius:50%;
+    border:1px solid rgba(177,154,85,0.25);
+  }
+  .cover::before{top:-170px;left:-120px;}
+  .cover::after{bottom:-190px;right:-110px;}
+  .sprig{width:120px;margin:0 auto 22px;}
+  .eyebrow{
+    font-family:'Cinzel',serif;
+    font-size:12px;
+    letter-spacing:0.32em;
+    color:var(--gold);
+    text-transform:uppercase;
+  }
+  .cover h1{
+    font-family:'Cormorant Garamond',serif;
+    font-weight:500;
+    font-size:clamp(40px,9vw,72px);
+    line-height:1.05;
+    margin:14px auto 10px;
+    max-width:760px;
+  }
+  .cover h1 em{color:var(--gold-soft);font-style:italic;}
+  .cover .sub{
+    font-family:'Cormorant Garamond',serif;
+    font-style:italic;
+    font-size:20px;
+    color:rgba(247,245,241,0.75);
+  }
+  .rule{
+    width:64px;height:1px;background:var(--gold);
+    margin:26px auto;
+  }
+  .cover .meta{
+    font-size:13px;
+    letter-spacing:0.12em;
+    text-transform:uppercase;
+    color:rgba(247,245,241,0.6);
+  }
+
+  /* ---------- Layout ---------- */
+  .wrap{max-width:860px;margin:0 auto;padding:0 18px;}
+
+  .letter{
+    background:var(--paper);
+    border:1px solid var(--line);
+    margin:-44px auto 0;
+    position:relative;
+    padding:36px 28px 32px;
+    box-shadow:0 18px 40px -28px rgba(10,10,10,0.35);
+  }
+  .letter h2{
+    font-family:'Cinzel',serif;
+    font-weight:500;
+    font-size:15px;
+    letter-spacing:0.2em;
+    color:var(--cranberry);
+    text-transform:uppercase;
+    margin-bottom:14px;
+  }
+  .letter p{
+    font-family:'Cormorant Garamond',serif;
+    font-size:20px;
+    line-height:1.55;
+    margin-bottom:12px;
+  }
+  .letter .sig{
+    font-family:'Cormorant Garamond',serif;
+    font-style:italic;
+    font-size:22px;
+    color:var(--evergreen);
+    margin-top:6px;
+  }
+
+  /* ---------- Contents ---------- */
+  .section-title{
+    font-family:'Cinzel',serif;
+    font-size:13px;
+    letter-spacing:0.28em;
+    text-transform:uppercase;
+    color:var(--gold);
+    text-align:center;
+    margin:56px 0 18px;
+  }
+  .toc{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:14px;
+  }
+  .toc a{
+    display:flex;
+    align-items:center;
+    gap:14px;
+    text-decoration:none;
+    background:var(--paper);
+    border:1px solid var(--line);
+    padding:14px 16px;
+    transition:border-color .2s, transform .2s;
+  }
+  .toc a:hover{border-color:var(--gold);transform:translateY(-2px);}
+  .toc .num{
+    font-family:'Cormorant Garamond',serif;
+    font-size:30px;
+    color:var(--gold);
+    line-height:1;
+    min-width:30px;
+  }
+  .toc .t{font-family:'Cormorant Garamond',serif;font-size:20px;font-weight:600;line-height:1.2;}
+  .toc .c{font-size:11px;letter-spacing:0.16em;text-transform:uppercase;color:var(--muted);}
+
+  /* ---------- Recipe cards ---------- */
+  .recipe{
+    background:var(--paper);
+    border:1px solid var(--line);
+    margin:28px 0;
+    scroll-margin-top:16px;
+    overflow:hidden;
+  }
+  .recipe-head{
+    display:grid;
+    grid-template-columns:132px 1fr;
+    gap:22px;
+    align-items:center;
+    padding:26px 26px 22px;
+    border-bottom:1px solid var(--line);
+  }
+  .badge{
+    width:132px;height:132px;
+    border-radius:50%;
+    display:grid;place-items:center;
+  }
+  .badge svg{width:84px;height:84px;}
+  .appetizer .badge{background:var(--cranberry-soft);}
+  .main .badge{background:var(--evergreen-soft);}
+  .side .badge{background:#f5ecd8;}
+  .cat{
+    display:inline-block;
+    font-size:11px;
+    letter-spacing:0.2em;
+    text-transform:uppercase;
+    padding:4px 10px;
+    border-radius:20px;
+    margin-bottom:8px;
+  }
+  .appetizer .cat{background:var(--cranberry);color:#fff;}
+  .main .cat{background:var(--evergreen);color:#fff;}
+  .side .cat{background:var(--gold);color:var(--black);}
+  .recipe h3{
+    font-family:'Cormorant Garamond',serif;
+    font-weight:600;
+    font-size:clamp(28px,5vw,38px);
+    line-height:1.1;
+  }
+  .by{
+    font-family:'Cormorant Garamond',serif;
+    font-style:italic;
+    font-size:19px;
+    color:var(--muted);
+    margin-top:4px;
+  }
+  .note{
+    margin:18px 26px 0;
+    padding:14px 18px;
+    border-left:3px solid var(--gold);
+    background:var(--ivory);
+    font-family:'Cormorant Garamond',serif;
+    font-style:italic;
+    font-size:19px;
+  }
+  .recipe-body{
+    display:grid;
+    grid-template-columns:minmax(0,1fr) minmax(0,1.35fr);
+    gap:30px;
+    padding:24px 26px 28px;
+  }
+  .recipe h4{
+    font-family:'Cinzel',serif;
+    font-weight:500;
+    font-size:13px;
+    letter-spacing:0.22em;
+    text-transform:uppercase;
+    color:var(--cranberry);
+    margin-bottom:12px;
+  }
+  .main h4{color:var(--evergreen);}
+  .side h4{color:#8a7434;}
+  .ing{list-style:none;}
+  .ing li{border-bottom:1px dashed var(--line);}
+  .ing label{
+    display:flex;gap:10px;align-items:flex-start;
+    padding:8px 0;
+    cursor:pointer;
+    font-size:15.5px;
+  }
+  .ing input{
+    appearance:none;-webkit-appearance:none;
+    width:18px;height:18px;flex:0 0 18px;
+    border:1.5px solid var(--gold);
+    border-radius:4px;
+    margin-top:3px;
+    display:grid;place-items:center;
+    cursor:pointer;
+  }
+  .ing input:checked{background:var(--gold);}
+  .ing input:checked::after{content:"";width:5px;height:9px;border:solid #fff;border-width:0 2px 2px 0;transform:rotate(45deg) translate(-1px,-1px);}
+  .ing input:checked + span{text-decoration:line-through;color:var(--muted);}
+  .hint{font-size:12px;color:var(--muted);margin-top:8px;}
+  .steps{list-style:none;counter-reset:s;}
+  .steps li{
+    counter-increment:s;
+    position:relative;
+    padding:0 0 16px 42px;
+    font-size:15.5px;
+  }
+  .steps li::before{
+    content:counter(s);
+    position:absolute;left:0;top:0;
+    width:28px;height:28px;border-radius:50%;
+    background:var(--black);color:var(--gold-soft);
+    font-family:'Cinzel',serif;font-size:13px;
+    display:grid;place-items:center;
+  }
+  .steps strong{font-weight:600;}
+  .tip{
+    margin-top:6px;
+    font-size:14px;
+    background:var(--ivory);
+    padding:12px 14px;
+  }
+  .tools{
+    display:flex;gap:10px;flex-wrap:wrap;
+    padding:0 26px 24px;
+  }
+  .btn{
+    font-family:'Jost',sans-serif;
+    font-size:12px;
+    letter-spacing:0.16em;
+    text-transform:uppercase;
+    border:1px solid var(--black);
+    background:transparent;
+    color:var(--black);
+    padding:10px 16px;
+    cursor:pointer;
+    text-decoration:none;
+  }
+  .btn:hover{background:var(--black);color:var(--ivory);}
+  .btn.gold{background:var(--gold);border-color:var(--gold);color:var(--black);}
+  .btn.gold:hover{background:var(--black);border-color:var(--black);color:var(--gold-soft);}
+
+  /* ---------- Simmer pot ---------- */
+  .simmer{
+    background:var(--evergreen);
+    color:var(--ivory);
+    padding:34px 28px;
+    margin:44px 0 0;
+    display:grid;
+    grid-template-columns:110px 1fr;
+    gap:24px;
+    align-items:start;
+  }
+  .simmer svg{width:110px;height:110px;}
+  .simmer h3{font-family:'Cormorant Garamond',serif;font-weight:500;font-size:32px;line-height:1.1;margin-bottom:10px;}
+  .simmer ol{padding-left:20px;}
+  .simmer li{margin-bottom:6px;font-size:15.5px;}
+  .simmer .small{font-size:13px;color:rgba(247,245,241,0.7);margin-top:10px;}
+
+  /* ---------- Share ---------- */
+  .share{
+    text-align:center;
+    background:var(--paper);
+    border:1px solid var(--line);
+    padding:38px 24px;
+    margin:44px 0;
+  }
+  .share h3{font-family:'Cormorant Garamond',serif;font-weight:500;font-size:34px;line-height:1.1;margin-bottom:10px;}
+  .share p{max-width:520px;margin:0 auto 20px;color:var(--muted);}
+
+  footer{
+    background:#050505;
+    color:rgba(247,245,241,0.55);
+    text-align:center;
+    padding:30px 20px 34px;
+    font-size:12px;
+    letter-spacing:0.08em;
+    line-height:1.9;
+  }
+  footer .exp-logo{width:150px;margin:0 auto 10px;}
+  .cover .exp-logo{width:130px;margin:0 auto 26px;opacity:0.95;}
+  footer span{color:var(--gold);}
+  footer a{color:var(--gold-soft);}
+
+  @media (max-width:640px){
+    .cover{padding:56px 16px 80px;}
+    .letter{padding:28px 20px 24px;}
+    .letter p{font-size:18px;}
+    .recipe-head{grid-template-columns:84px 1fr;gap:16px;padding:20px 18px 18px;}
+    .badge{width:84px;height:84px;}
+    .badge svg{width:54px;height:54px;}
+    .note{margin:16px 18px 0;}
+    .recipe-body{grid-template-columns:1fr;gap:22px;padding:20px 18px 22px;}
+    .tools{padding:0 18px 20px;}
+    .simmer{grid-template-columns:1fr;padding:28px 20px;}
+    .simmer svg{width:80px;height:80px;}
+  }
+
+  @media print{
+    body{background:#fff;}
+    .cover{background:#fff;color:var(--black);padding:24px 0;}
+    .cover::before,.cover::after,.toc-wrap,.tools,.share,.hint{display:none !important;}
+    .cover .sub,.cover .meta{color:var(--muted);}
+    .letter{margin:0;box-shadow:none;}
+    .recipe{break-inside:avoid;page-break-inside:avoid;}
+    .simmer{background:#fff;color:var(--black);border:1px solid var(--line);}
+    .simmer .small{color:var(--muted);}
+    footer{background:#fff;color:var(--muted);}
+    .exp-logo{filter:invert(1);}
+    body.print-one .recipe:not(.printing),
+    body.print-one .cover,
+    body.print-one .letter,
+    body.print-one .section-title,
+    body.print-one .simmer{display:none !important;}
+  }
+</style>
+</head>
+<body>
+
+<header class="cover">
+  <img class="exp-logo" src="exp-realty-logo-white.png" alt="eXp Realty">
+  <svg class="sprig" viewBox="0 0 120 60" aria-hidden="true">
+    <g fill="none" stroke="#B19A55" stroke-width="1.4" stroke-linecap="round">
+      <path d="M8 44 C38 30, 82 30, 112 44"/>
+      <path d="M28 38 l-8 -10 M28 38 l-10 2 M46 34 l-6 -11 M46 34 l-11 -1 M74 34 l6 -11 M74 34 l11 -1 M92 38 l8 -10 M92 38 l10 2"/>
+    </g>
+    <circle cx="56" cy="42" r="4.5" fill="#8E1B2C"/>
+    <circle cx="64" cy="44" r="4.5" fill="#8E1B2C"/>
+    <circle cx="60" cy="36" r="4.5" fill="#a8293c"/>
+  </svg>
+  <div class="eyebrow">Holiday Kickoff 2026</div>
+  <h1>The Client Community <em>Holiday Recipe Book</em></h1>
+  <div class="sub">Favorite dishes, shared by the people who make a house feel like home</div>
+  <div class="rule"></div>
+  <div class="meta">Volume One &middot; Indianapolis &middot; 2026</div>
+</header>
+
+<main class="wrap">
+
+  <section class="letter">
+    <h2>A Note Before You Cook</h2>
+    <p>Thank you for being part of our client community. When we asked for the dish everyone asks you to bring, we hoped to end up with a little book of real recipes from real kitchens, and that is exactly what you sent.</p>
+    <p>Save this page to your phone, check off ingredients as you shop, and come back whenever you need a crowd pleaser this season. If your favorite is not here yet, there is still room.</p>
+    <p class="sig">With gratitude, Jessica &amp; Stacy</p>
+  </section>
+
+  <div class="toc-wrap">
+    <div class="section-title">Inside This Book</div>
+    <nav class="toc" aria-label="Recipes">
+      <a href="#cranberry-jalapeno-dip"><span class="num">01</span><span><span class="c">Appetizer</span><br><span class="t">Holiday Jalape&ntilde;o Cranberry Dip</span></span></a>
+      <a href="#cream-cheese-chicken-chili"><span class="num">02</span><span><span class="c">Main</span><br><span class="t">Cream Cheese Chicken Chili</span></span></a>
+      <a href="#cheesy-hash-brown-casserole"><span class="num">03</span><span><span class="c">Side</span><br><span class="t">Cheesy Hash Brown Casserole</span></span></a>
+      <a href="#simmer-pot"><span class="num">&#10045;</span><span><span class="c">Bonus</span><br><span class="t">Your Holiday Simmer Pot</span></span></a>
+    </nav>
+  </div>
+
+  <div class="section-title">The Recipes</div>
+
+  <!-- 01 -->
+  <article class="recipe appetizer" id="cranberry-jalapeno-dip">
+    <div class="recipe-head">
+      <div class="badge" aria-hidden="true">
+        <svg viewBox="0 0 84 84"><ellipse cx="42" cy="54" rx="32" ry="12" fill="#fff" stroke="#8E1B2C" stroke-width="2"/><path d="M14 52 Q42 30 70 52" fill="#fbf6ee"/><g fill="#8E1B2C"><circle cx="32" cy="44" r="4"/><circle cx="41" cy="41" r="4.3"/><circle cx="50" cy="44" r="4"/><circle cx="37" cy="48" r="3.6"/><circle cx="46" cy="48" r="3.6"/></g><path d="M56 30 q8 -6 14 2 q-6 8 -14 -2z" fill="#2F4A3A"/><path d="M60 30 l-4 -6" stroke="#2F4A3A" stroke-width="2" stroke-linecap="round"/></svg>
+      </div>
+      <div>
+        <span class="cat">Appetizer</span>
+        <h3>Holiday Jalape&ntilde;o Cranberry Dip</h3>
+        <div class="by">Shared by the Schoettmer Family</div>
+      </div>
+    </div>
+    <div class="recipe-body">
+      <div>
+        <h4>Ingredients</h4>
+        <ul class="ing">
+          <li><label><input type="checkbox"><span>12 oz fresh cranberries</span></label></li>
+          <li><label><input type="checkbox"><span>1 fresh jalape&ntilde;o, seeded</span></label></li>
+          <li><label><input type="checkbox"><span>1 cup sugar</span></label></li>
+          <li><label><input type="checkbox"><span>Lime juice, to taste</span></label></li>
+          <li><label><input type="checkbox"><span>16 oz cream cheese, at room temperature</span></label></li>
+          <li><label><input type="checkbox"><span>1/4 cup sour cream</span></label></li>
+          <li><label><input type="checkbox"><span>Pinch of salt</span></label></li>
+          <li><label><input type="checkbox"><span>4 sprigs cilantro, plus extra to garnish</span></label></li>
+          <li><label><input type="checkbox"><span>Crackers of your choice, for serving</span></label></li>
+        </ul>
+        <p class="hint">Tap to check off ingredients as you shop.</p>
+      </div>
+      <div>
+        <h4>Directions</h4>
+        <ol class="steps">
+          <li>In a food processor, pulse the cranberries and jalape&ntilde;o until finely chopped. Strain off any extra cranberry juice.</li>
+          <li>In a bowl, stir together the cranberry mixture, sugar, lime juice, salt, and cilantro.</li>
+          <li>In a separate bowl, blend the cream cheese and sour cream until smooth. Spread it onto a festive tray or into a shallow bowl.</li>
+          <li>Spoon the cranberry jalape&ntilde;o mixture over the top, garnish with extra cilantro if you like, and serve with crackers.</li>
+        </ol>
+      </div>
+    </div>
+    <div class="tools">
+      <button class="btn" onclick="printOne('cranberry-jalapeno-dip')">Print this recipe</button>
+    </div>
+  </article>
+
+  <!-- 02 -->
+  <article class="recipe main" id="cream-cheese-chicken-chili">
+    <div class="recipe-head">
+      <div class="badge" aria-hidden="true">
+        <svg viewBox="0 0 84 84"><rect x="16" y="34" width="52" height="30" rx="8" fill="#fff" stroke="#2F4A3A" stroke-width="2"/><rect x="12" y="28" width="60" height="9" rx="4.5" fill="#2F4A3A"/><rect x="36" y="20" width="12" height="7" rx="3" fill="#2F4A3A"/><path d="M8 46 h8 M68 46 h8" stroke="#2F4A3A" stroke-width="3" stroke-linecap="round"/><path d="M30 16 q-4 -5 0 -10 M42 14 q-4 -5 0 -10 M54 16 q-4 -5 0 -10" stroke="#B19A55" stroke-width="1.8" fill="none" stroke-linecap="round"/></svg>
+      </div>
+      <div>
+        <span class="cat">Main</span>
+        <h3>Cream Cheese Chicken Chili</h3>
+        <div class="by">Shared by the Foreman Family</div>
+      </div>
+    </div>
+    <p class="note">"Not really a holiday one," the Foremans told us, and it did not even have a name until this book. It is a slow cooker recipe, which makes it a gift on a busy holiday weekend.</p>
+    <div class="recipe-body">
+      <div>
+        <h4>Ingredients</h4>
+        <ul class="ing">
+          <li><label><input type="checkbox"><span>2 large chicken breasts</span></label></li>
+          <li><label><input type="checkbox"><span>1 can black beans, drained</span></label></li>
+          <li><label><input type="checkbox"><span>1 can corn</span></label></li>
+          <li><label><input type="checkbox"><span>1 can Rotel tomatoes</span></label></li>
+          <li><label><input type="checkbox"><span>8 oz cream cheese</span></label></li>
+          <li><label><input type="checkbox"><span>1 packet ranch dip mix</span></label></li>
+          <li><label><input type="checkbox"><span>1/2 packet taco seasoning</span></label></li>
+          <li><label><input type="checkbox"><span>1 tbsp chili powder</span></label></li>
+          <li><label><input type="checkbox"><span>1 tsp cumin</span></label></li>
+          <li><label><input type="checkbox"><span>1 tsp onion powder</span></label></li>
+        </ul>
+        <p class="hint">Tap to check off ingredients as you shop.</p>
+      </div>
+      <div>
+        <h4>Directions</h4>
+        <ol class="steps">
+          <li>In a slow cooker, mix the beans, corn, tomatoes, chili powder, onion powder, cumin, and ranch mix until well combined.</li>
+          <li>Press the chicken down into the mixture and sprinkle the taco seasoning over the chicken.</li>
+          <li>Add the cream cheese beside the chicken, not on top of it. Cutting the block in half makes this easier.</li>
+          <li>Cook on low for 6 to 7 hours, until the chicken falls apart easily with a fork.</li>
+          <li>Move the chicken to a bowl, shred it, and return it to the slow cooker. Stir until the cream cheese is fully melted and combined.</li>
+        </ol>
+        <p class="tip"><strong>Make it a dip:</strong> shred the chicken extra fine and serve it warm with chips.</p>
+      </div>
+    </div>
+    <div class="tools">
+      <button class="btn" onclick="printOne('cream-cheese-chicken-chili')">Print this recipe</button>
+    </div>
+  </article>
+
+  <!-- 03 -->
+  <article class="recipe side" id="cheesy-hash-brown-casserole">
+    <div class="recipe-head">
+      <div class="badge" aria-hidden="true">
+        <svg viewBox="0 0 84 84"><rect x="10" y="32" width="64" height="30" rx="5" fill="#fff" stroke="#8a7434" stroke-width="2"/><path d="M4 40 h6 M74 40 h6" stroke="#8a7434" stroke-width="3" stroke-linecap="round"/><path d="M14 36 q6 -6 12 0 q6 -6 12 0 q6 -6 12 0 q6 -6 12 0 q6 -6 6 0 v6 h-54z" fill="#E8B84A"/><g fill="#c8902a"><circle cx="22" cy="40" r="1.8"/><circle cx="36" cy="39" r="1.8"/><circle cx="50" cy="41" r="1.8"/><circle cx="62" cy="39" r="1.8"/></g></svg>
+      </div>
+      <div>
+        <span class="cat">Side</span>
+        <h3>Cheesy Hash Brown Casserole</h3>
+        <div class="by">Shared by the Williams Family</div>
+      </div>
+    </div>
+    <div class="recipe-body">
+      <div>
+        <h4>Ingredients</h4>
+        <ul class="ing">
+          <li><label><input type="checkbox"><span>1 bag (30 oz) frozen shredded hash browns, thawed</span></label></li>
+          <li><label><input type="checkbox"><span>1 can (10.5 oz) cream of chicken soup</span></label></li>
+          <li><label><input type="checkbox"><span>1 cup sour cream</span></label></li>
+          <li><label><input type="checkbox"><span>2 cups shredded cheddar cheese, divided</span></label></li>
+          <li><label><input type="checkbox"><span>1/2 cup butter, melted</span></label></li>
+          <li><label><input type="checkbox"><span>1/2 cup finely chopped onion</span></label></li>
+          <li><label><input type="checkbox"><span>1/2 tsp garlic powder</span></label></li>
+          <li><label><input type="checkbox"><span>1/2 tsp salt</span></label></li>
+          <li><label><input type="checkbox"><span>1/4 tsp black pepper</span></label></li>
+          <li><label><input type="checkbox"><span>1 1/2 cups crushed cornflakes or buttery crackers</span></label></li>
+          <li><label><input type="checkbox"><span>3 tbsp butter, melted, for the topping</span></label></li>
+        </ul>
+        <p class="hint">Tap to check off ingredients as you shop.</p>
+      </div>
+      <div>
+        <h4>Directions</h4>
+        <ol class="steps">
+          <li>Heat the oven to 350&deg;F and lightly grease a 9x13 baking dish.</li>
+          <li>In a large bowl, stir together the soup, sour cream, 1/2 cup melted butter, 1 1/2 cups of the cheddar, onion, garlic powder, salt, and pepper until smooth.</li>
+          <li>Fold in the hash browns until they are evenly coated, then spread the mixture into the dish.</li>
+          <li>Sprinkle the remaining 1/2 cup of cheddar over the top.</li>
+          <li>Toss the crushed cornflakes with the 3 tbsp melted butter and scatter them over the casserole.</li>
+          <li>Bake uncovered for 45 to 50 minutes, until bubbly and golden brown.</li>
+        </ol>
+      </div>
+    </div>
+    <div class="tools">
+      <button class="btn" onclick="printOne('cheesy-hash-brown-casserole')">Print this recipe</button>
+    </div>
+  </article>
+
+  <!-- Simmer pot -->
+  <section class="simmer" id="simmer-pot">
+    <svg viewBox="0 0 110 110" aria-hidden="true"><circle cx="55" cy="55" r="52" fill="none" stroke="#B19A55" stroke-width="1.2"/><circle cx="42" cy="60" r="14" fill="#E8913A"/><circle cx="42" cy="60" r="9" fill="none" stroke="#f7d29a" stroke-width="1.4"/><path d="M42 51 v18 M33 60 h18 M36 54 l12 12 M48 54 l-12 12" stroke="#f7d29a" stroke-width="1"/><g fill="#a8293c"><circle cx="66" cy="66" r="5"/><circle cx="74" cy="58" r="5"/><circle cx="64" cy="54" r="4.5"/></g><rect x="56" y="34" width="26" height="6" rx="3" fill="#8b5a2b" transform="rotate(-24 69 37)"/><path d="M30 34 q10 -12 22 -6 M36 30 l-4 -6 M44 27 l0 -7" stroke="#cfe0d3" stroke-width="2" fill="none" stroke-linecap="round"/></svg>
+    <div>
+      <div class="eyebrow">Bonus &middot; From Your Gift Bag</div>
+      <h3>Your Holiday Simmer Pot</h3>
+      <ol>
+        <li>Empty your kit into a medium saucepan and cover with a few inches of water.</li>
+        <li>Bring it to a gentle boil, then turn the heat down to the lowest simmer.</li>
+        <li>Add water every 30 minutes or so to keep everything covered.</li>
+        <li>Turn it off when you leave the room. Cooled contents keep in the fridge for a day or two of reuse.</li>
+      </ol>
+      <p class="small">Never leave a simmer pot unattended on the stove, and keep it out of reach of kids and pets. The contents are for scent only, not for eating.</p>
+    </div>
+  </section>
+
+  <!-- Share -->
+  <section class="share">
+    <div class="eyebrow">Volume Two Starts Now</div>
+    <h3>Have a favorite we are missing?</h3>
+    <p>Send us the dish everyone asks you to bring, plus a line about why it matters to your family, and we will add it to the book.</p>
+    <a class="btn gold" href="mailto:jw.indyrealestate@gmail.com?subject=Recipe%20for%20the%20Holiday%20Recipe%20Book">Email your recipe</a>
+  </section>
+
+</main>
+
+<footer>
+  <img class="exp-logo" src="exp-realty-logo-white.png" alt="eXp Realty">
+  Jessica Williams &amp; Stacy Preston, REALTORS&reg; &middot; <span>eXp Realty</span><br>
+  Recipes shared by clients for personal, non-commercial use.
+</footer>
+
+<script>
+  function printOne(id){
+    var el=document.getElementById(id);
+    document.body.classList.add('print-one');
+    el.classList.add('printing');
+    window.print();
+    setTimeout(function(){
+      document.body.classList.remove('print-one');
+      el.classList.remove('printing');
+    },500);
+  }
+</script>
+</body>
+</html>
